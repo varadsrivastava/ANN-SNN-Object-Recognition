@@ -13,7 +13,7 @@ spinnaker8 front-end interface to map the network to spiNNaker.
 import pyNN.spiNNaker as sim
 import pyNN.utility.plotting as plot
 import matplotlib.pyplot as plt
-import misc
+from spyNNaker import *
 import time
 import numpy as np
 import os
@@ -29,14 +29,14 @@ INHIBITORY = True           # use the MLP model with inhibitory synapses (negait
 output_spikes = []
 
 if INHIBITORY:
-    path = './model/dvs36_evtaccCOR_D16_B0_FLAT_30E/'
+    path = './spyNNaker/model/dvs36_evtaccCOR_D16_B0_FLAT_30E/'
 else:
-    path = './model/dvs36_evtacc_D16_B0_FLAT_posW_10E/'
+    path = './spyNNaker/model/dvs36_evtacc_D16_B0_FLAT_posW_10E/'
 p1 = path + '01Dense_16'
 p2 = path + '02Dense_4'
 
 
-filepaths, labels = misc.get_sample_filepaths_and_labels('./data/aedat/balanced_100/')
+filepaths, labels = mnist.get_sample_filepaths_and_labels('./data/aedat/balanced_100/')
 
 sim.setup(timestep=1.0)
 
