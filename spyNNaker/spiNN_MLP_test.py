@@ -13,7 +13,7 @@ spinnaker8 front-end interface to map the network to spiNNaker.
 import pyNN.spiNNaker as sim
 import pyNN.utility.plotting as plot
 import matplotlib.pyplot as plt
-from spyNNaker import *
+import spyNNaker.mnist as mnist
 import time
 import numpy as np
 import os
